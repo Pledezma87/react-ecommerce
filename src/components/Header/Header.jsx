@@ -6,15 +6,22 @@ function Header() {
 
   return (
     <div className='container-header'>
-        <div className='container-navbar'>
-         
-           <Navbar />
 
+        <div className='container-navbar'>
+           <Navbar />
         </div>
+
         <div className='logo'>
             <Link to={`/`}><img src={logo}></img> </Link>
         </div>
 
+        <div className='user'>
+          <a href=""> <img src={user} alt="user" /></a>
+        </div>
+
+        <div className='cart'>
+          <a href=""> <img src={cartIcon} alt="cart" /></a>
+        </div>
     </div>
   )
 }
