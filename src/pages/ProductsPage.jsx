@@ -4,7 +4,7 @@ import Footer from'../components/Footer/Footer';
 import Cards from'../components/Cards/Cards';
 import Filter from'../components/Filter/Filter';
 import slider from'../assets/slider.png';
-import PruebaCards from'../components/Cards/prueba/PruebaCards';
+
 
 function ProductsPage() {
   return ( <>
@@ -14,8 +14,7 @@ function ProductsPage() {
         <img src={slider}></img>
         </div>
         <Filter />
-        {/* <Cards /> */}
-        <PruebaCards />
+        <Cards />
         <Footer />
         
           </> );      
