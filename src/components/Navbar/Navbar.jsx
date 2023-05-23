@@ -24,7 +24,7 @@ const toggleMenu = () => {
         <nav className={ `Cabecera-nav ${ menu ? 'isActive' : '' }` }>
             <ul className="Cabecera-ul">
                 <li className="Cabecera-li"><a href="#" className="Cabecera-a">Women</a></li>
-                <li className="Cabecera-li"><a href="#" className="Cabecera-a"><Link to={`/men`} />Men</a></li>
+                <li className="Cabecera-li"><a href="#" className="Cabecera-a"><Link to={`/men`}>Men</Link></a></li>
                 <li className="Cabecera-li"><a href="#" className="Cabecera-a">New Arrivals</a></li>
                 <li className="Cabecera-li"><a href="#" className="Cabecera-a">Sale</a></li>
                 <li className="Cabecera-li"><a href="#" className="Cabecera-a">About us</a></li>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import  Navbar from '../../components/Navbar/Navbar'
-import logo from '../../assets/logosmall.png'
+import  Navbar from '../../components/Navbar/Navbar';
+import logo from '../../assets/logosmall.png';
+import cartIcon from '../../assets/image 5.png';
+import user from '../../assets/image 6.png';
+import lupa from '../../assets/search.png';
 function Header() {
 
   return (
@@ -14,6 +17,12 @@ function Header() {
         <div className='logo'>
             <Link to={`/`}><img src={logo}></img> </Link>
         </div>
+        <div className='container-right'>
+
+        <div className='searchbar'>
+            <img src={lupa}></img>
+            <input type= "text" className = "searchinput"></input>
+        </div>
 
         <div className='user'>
           <a href=""> <img src={user} alt="user" /></a>
@@ -21,6 +30,8 @@ function Header() {
 
         <div className='cart'>
           <a href=""> <img src={cartIcon} alt="cart" /></a>
+        </div>
+
         </div>
     </div>
   )

@@ -1,10 +1,10 @@
 {
-  "products": [
+  "stock": [
     {
       "id": 1,
       "name": "Pantalón jogger lino rústico",
       "price": 25.99,
-      "img": "pantalon1.png",
+      "img": "./src/assets/img/pantalon1.png",
       "quantity": 1,
       "category": "jogger"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "name": "Pantalón cargo caqui cremalleras",
       "price": 39.99,
-      "img": "pantalon2.png",
+      "img": "c://desktop/proyectos/react-ecommerce/src/assets/pantalon1.png",
       "quantity": 1,
       "category": "cargo"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "name": "Pantalón cargo básico",
       "price": 25.99,
-      "img": "pantalon3.png",
+      "img": "./src/assets/pantalon3.png",
       "quantity": 1,
       "category": "cargo"
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "name": "Pantalón cargo",
       "price": 29.99,
-      "img": "pantalon4.png",
+      "img": "./assets/pantalon4.png",
       "quantity": 1,
       "category": "cargo"
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "name": "Pantalón jogger básico",
       "price": 25.99,
-      "img": "pantalon5.png",
+      "img": "src/assets/image 5.png",
       "quantity": 1,
       "category": "jogger"
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "name": "Pantalón jogger lino",
       "price": 29.99,
-      "img": "pantalon6.png",
+      "img": "./assets/pantalon6.png",
       "quantity": 1,
       "category": "jogger"
     },
@@ -52,7 +52,7 @@
       "id": 7,
       "name": "Pantalón chandal",
       "price": 29.99,
-      "img": "pantalon7.png",
+      "img": "./assets/pantalon7.png",
       "quantity": 1,
       "category": "chandal"
     },
@@ -60,7 +60,7 @@
       "id": 8,
       "name": "Pantalón chandal cargo básico",
       "price": 25.99,
-      "img": "pantalon8.png",
+      "img": "./assets/pantalon8.png",
       "quantity": 1,
       "category": "chandal"
     },
@@ -68,7 +68,7 @@
       "id": 9,
       "name": "Pantalón chandal lino",
       "price": 25.99,
-      "img": "pantalon9.png",
+      "img": "./assets/pantalon9.png",
       "quantity": 1,
       "category": "chandal"
     }
