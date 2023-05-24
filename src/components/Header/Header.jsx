@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import { Link } from 'react-router-dom';
 import  Navbar from '../../components/Navbar/Navbar';
 import logo from '../../assets/logosmall.png';
@@ -8,6 +8,7 @@ import lupa from '../../assets/search.png';
 import './header.css';
 
 function Header() {
+
 
   return (
       <div className='container-header'>
