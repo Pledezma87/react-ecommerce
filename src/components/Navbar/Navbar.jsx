@@ -8,13 +8,13 @@ function Navbar() {
 
 const [ menu , setMenu ]= useState(false);
 
+
 const toggleMenu = () => {
     setMenu( !menu )
 }
 
   return (
     <header className="Cabecera">
-
         <button 
         onClick={ toggleMenu }
         className="Cabecera-button">

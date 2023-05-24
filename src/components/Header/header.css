@@ -1,0 +1,41 @@
+.container-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-navbar{
+    display: flex;
+    z-index: 1;
+}
+
+.imagelogo{
+    display: flex;
+}
+
+.container-right{
+    display: flex;
+    flex-direction: row;
+    margin-right: 25px;
+    align-items: center;
+}
+
+.lupa{
+    margin-right: 5px;
+}
+
+.searchbar{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    border-bottom: solid 2px;
+    padding: 5px;
+}
+
+@media (max-width: 600px){
+
+    .searchbar{
+    display: none;
+    }  
+    
+}

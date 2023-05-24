@@ -11,7 +11,7 @@ function ProductsPage() {
   
         <Header />
         <div className='productsbanner'> 
-        <img src={slider}></img>
+        <img src={slider} className='slider-img'/>
         </div>
         <Filter />
         <Cards />
