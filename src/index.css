@@ -32,6 +32,7 @@
     display: flex;
     background-color: pink;
     position: relative;
+
     
 }
 
@@ -43,29 +44,32 @@
 
 .banermen-img {
     object-fit:cover;
-    width: 100%; 
-    height: 100%;
+   /*  width:626px;
+    height: 1093px; */
+    width: 50vw; 
+    height: 100vh;
 }
 
-.title {
+.titlewomen {
     position: absolute;
     z-index: 1;
     color: white;
     font-size: 2.5rem;
     font-weight: 500;
-    margin-left: 28%;
-    margin-top: -25%;
+    margin-left: 40%;
+    top: 50%;
 
 }
-.collection-title-man {
+.titlemen {
     position: absolute;
     z-index: 1;
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-left: 50%;
+    top: 50%;
+
 }
-.collection-title-woman:hover {
-    font-weight: 800;
-    cursor: pointer;
-    
- }
 
 /*MEDIA QUERY HOME*/ 
 @media (max-width: 850px) {
@@ -80,6 +84,9 @@
     
     .banermen {
         width: 100%; height: 80%;
+    }
+    .banermen-img{
+        width: 100vw;
     }
 }
 
