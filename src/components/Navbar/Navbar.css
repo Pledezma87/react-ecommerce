@@ -1,6 +1,12 @@
+.Cabecera{
+    width: 25px;
+    background-color: white;
+}
+
 .Cabecera-button{
     display: flex;
     border: none;
+    background-color: white;
 }
 
 .Cabecera-nav{
@@ -10,24 +16,37 @@
     height:0vh;
     opacity: 0;
     overflow: hidden;
-    transition: all .5s ease;
 }
 
 .Cabecera-nav.isActive{
-    height:15vh;
+    height:210px;
     opacity: 1;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    border-width: 1px;
+    margin-top: 15px;
 }
 
 .icon-menu{
     cursor: pointer;
+    margin-left: 25px;
+    background-color: white;
 }
-
 
 .Cabecera-ul{
     flex-direction: column;
     list-style: none;
+    margin-left: 25px;
+    height: 100%;
 }
 
 .Cabecera-li{
-    margin: .5em 0;
+    margin: .8em 0;
+    font-size: larger;
+}
+
+.Cabecera-li{
+    margin: .8em 0;
+    font-size: larger;
 }

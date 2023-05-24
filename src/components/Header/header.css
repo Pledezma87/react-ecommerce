@@ -1,0 +1,41 @@
+.container-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-navbar{
+    display: flex;
+}
+
+.imagelogo{
+    display: flex;
+}
+
+.container-right{
+    display: flex;
+    flex-direction: row;
+    margin-right: 25px;
+    align-items: center;
+}
+
+.searchbar{
+    border-bottom: solid;
+    height: 25px;
+    width: 200px;
+    align-items: center;
+}
+
+.searchinput{
+    border: none;
+    width: 175px;
+    color: #000;
+}
+
+@media (max-width: 600px){
+
+    .searchbar{
+    display: none;
+    }  
+    
+}
