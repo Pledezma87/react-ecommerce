@@ -2,16 +2,16 @@ import { useEffect, useState } from 'react';
 import { useForm } from '../hook/useForm';
 import { ProductContext } from './ProductContext';
 
-
 export const ProductProvider = ({ children }) => {
-	const [allProducts, setAllProducts] = useState([]);
 	
-    const { valueSearch, onInputChange, onResetForm } = useForm({
+  const [allProducts, setAllProducts] = useState([]);
+	
+  const { valueSearch, onInputChange, onResetForm } = useForm({
 		valueSearch: '',
 	});
     
 	const getGlobalProducts = async () => {
-        fetch('http://localhost:3005/stock')
+        fetch('http://localhost:3000/stock')
         .then((response) => response.json())
         .then((data) => {
           const productsData = data.map((item) => ({
@@ -27,20 +27,17 @@ export const ProductProvider = ({ children }) => {
         .catch((error) => console.log(error));
 	};
 
-
-
 	useEffect(() => {
 		getGlobalProducts();
 	}, []);
 
-	// BTN CARGAR MÁS
 	return (
 		<ProductContext.Provider
 			value={{
-			allProducts,
-            onInputChange,
-            valueSearch,
-            onResetForm,     
+			  allProducts,
+        onInputChange,
+        valueSearch,
+        onResetForm,     
 			}}
 		>
 			{children}

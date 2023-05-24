@@ -7,17 +7,20 @@ import slider from'../assets/slider.png';
 
 
 function ProductsPage() {
-  return ( <>
+
+  return ( 
+    <>
   
-        <Header />
-        <div className='productsbanner'> 
+      <Header />
+      <div className='productsbanner'> 
         <img src={slider} className='slider-img'/>
-        </div>
-        <Filter />
-        <Cards />
-        <Footer />
+      </div>
+      <Filter />
+      <Cards />
+      <Footer />
         
-          </> );      
+    </> 
+    );      
 };
 
 export default ProductsPage

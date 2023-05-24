@@ -4,15 +4,19 @@ import Footer from'../components/Footer/Footer';
 import Cards from'../components/Cards/Cards';
 
 function ProductsDetails() {
-  return ( <>
-  <div>
-    <h1>me gane otro millon</h1>
-  </div>
+  return (
+  <>
+
+    <div>
+      <h1>me gane otro millon</h1>
+    </div>
   
-        <Header />
-        <Cards />
-        <Footer />
-          </> );      
+    <Header />
+    <Cards />
+    <Footer />
+
+  </>
+  );      
 };
 
 export default ProductsDetails

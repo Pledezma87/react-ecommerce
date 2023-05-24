@@ -9,7 +9,6 @@
 
 /*HOME*/
 
-
 .banner {
     width: 100%;
     display: flex;
@@ -32,8 +31,6 @@
     align-items: center;
     display: flex;
     position: relative;
-
-    
 }
 
 .banerwomen-img {
@@ -58,8 +55,8 @@
     font-weight: 500;
     margin-left: 40%;
     top: 50%;
-
 }
+
 .titlemen {
     position: absolute;
     z-index: 1;
@@ -68,8 +65,8 @@
     font-weight: 500;
     margin-left: 50%;
     top: 50%;
-
 }
+
 
 /*MEDIA QUERY HOME*/ 
 @media (max-width: 850px) {
@@ -90,10 +87,7 @@
     }
 }
 
-
-
 /*PRODUCTS*/
-
 
 .slider-img {
     height: 100%;
@@ -108,11 +102,8 @@
 }
 
 
-
 /*MEDIA QUERY PRODUCTS*/ 
 @media (max-width: 850px) {
-
-
 
     .productsbanner {
         padding-bottom: 10px;
@@ -121,6 +112,4 @@
         height: 100%;
     }
 
-
 }
-

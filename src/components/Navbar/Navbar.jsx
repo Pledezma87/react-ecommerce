@@ -8,13 +8,14 @@ function Navbar() {
 
 const [ menu , setMenu ]= useState(false);
 
-
 const toggleMenu = () => {
     setMenu( !menu )
 }
 
   return (
+
     <header className="Cabecera">
+
         <button 
         onClick={ toggleMenu }
         className="Cabecera-button">
@@ -22,16 +23,17 @@ const toggleMenu = () => {
         </button>
 
         <nav className={ `Cabecera-nav ${ menu ? 'isActive' : '' }` }>
-            <ul className="Cabecera-ul">
-                <li className="Cabecera-li"><a href="#" className="Cabecera-a">Women</a></li>
-                <li className="Cabecera-li"><a href="#" className="Cabecera-a"><Link to={`/men`}>Men</Link></a></li>
-                <li className="Cabecera-li"><a href="#" className="Cabecera-a">New Arrivals</a></li>
-                <li className="Cabecera-li"><a href="#" className="Cabecera-a">Sale</a></li>
-                <li className="Cabecera-li"><a href="#" className="Cabecera-a">About us</a></li>
-            </ul>
+          <ul className="Cabecera-ul">
+            <li className="Cabecera-li"><a href="#" className="Cabecera-a">Women</a></li>
+            <li className="Cabecera-li"><a href="#" className="Cabecera-a"><Link to={`/men`}>Men</Link></a></li>
+            <li className="Cabecera-li"><a href="#" className="Cabecera-a">New Arrivals</a></li>
+            <li className="Cabecera-li"><a href="#" className="Cabecera-a">Sale</a></li>
+            <li className="Cabecera-li"><a href="#" className="Cabecera-a">About us</a></li>
+          </ul>
         </nav>
 
     </header>
+    
   );
 };
 
