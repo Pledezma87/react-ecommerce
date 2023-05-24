@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext} from 'react';
+import { ProductContext } from '../../context/ProductContext';
 import './Cards.css'; 
+
+
 
 const Product = ({ product, addToCart }) => {
   const { name, img, sizes, price } = product;
@@ -16,29 +19,10 @@ const Product = ({ product, addToCart }) => {
 };
 
 const Cards = ({ addToCart }) => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-   
-    fetch('http://localhost:3000/stock')
-      .then((response) => response.json())
-      .then((data) => {
-        const productsData = data.map((item) => ({
-          id: item.id,
-          name: item.name,
-          price: item.price,
-          img: item.img,
-          //   sizes: item.sizes,
-        }));
-        console.log(productsData);
-        setProducts(productsData);
-      })
-      .catch((error) => console.log(error));
-  }, []);
-
+const {allProducts} = useContext(ProductContext)
   return (
     <div className="card-container"> 
-      {products.map((product) => (
+      {allProducts.map((product) => (
         <Product
           key={product.id}
           product={product}
