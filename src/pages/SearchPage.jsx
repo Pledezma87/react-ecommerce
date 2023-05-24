@@ -40,14 +40,14 @@ function SearchPage() {
           <img src={slider} className='slider-img'/>
         </div>
         <Filter />
-            <div className="card-container"> 
-              {filteredProducts.map((product) => (
-                <Product
-                key={product.id}
-                product={product}
-                />
-              ))}
-            </div>
+        <div className="card-container"> 
+          {filteredProducts.map((product) => (
+            <Product
+            key={product.id}
+            product={product}
+            />
+          ))}
+        </div>
         <Footer />
         
     </> 
