@@ -6,6 +6,7 @@ import cartIcon from '../../assets/image 5.png';
 import user from '../../assets/image 6.png';
 import lupa from '../../assets/search.png';
 import './header.css';
+import SearchBar from '../Searchbar/Searchbar';
 
 function Header() {
 
@@ -22,11 +23,14 @@ function Header() {
         </div>
 
         <div className='container-right'>
+          
           <div className='searchbar'>
             <img src={lupa} className='lupa'></img>
-            <input type= "text" className="searchinput" placeholder="Search..."></input>
-          </div>
 
+            <SearchBar />
+
+          </div>
+          
           <div className='user'>
             <a href=""> <img src={user} alt="user" /></a>
           </div>

@@ -11,17 +11,19 @@ function App() {
 
   return (
     <Router>
-     <div className="container">
-       <h1>QUE BIENNNNNNNNN</h1> 
-       {/* <hr/> */}
+      <div className="container">
+  
+        {/* <hr/> */}
+
         <Routes>
           <Route path="/"exact element={<HomePage />}/>
           <Route path="/men" element={<ProductsPage />}/>
           <Route path="/products/:id" element={<ProductsDetails />}/>
         </Routes>
+
       </div>
     </Router>
   );
-  };
+};
 
 export default App;
