@@ -13,7 +13,7 @@ function App() {
     <Router>
      <div className="container">
        <h1>QUE BIENNNNNNNNN</h1> 
-       <hr/>
+       {/* <hr/> */}
         <Routes>
           <Route path="/"exact element={<HomePage />}/>
           <Route path="/men" element={<ProductsPage />}/>
