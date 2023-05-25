@@ -5,7 +5,9 @@ import { ProductContext } from './ProductContext';
 export const ProductProvider = ({ children }) => {
 	
   const [allProducts, setAllProducts] = useState([]);
-	
+
+  const [active, setActive] = useState(false);
+  
   const { valueSearch, onInputChange, onResetForm } = useForm({
 		valueSearch: '',
 	});
@@ -30,14 +32,52 @@ export const ProductProvider = ({ children }) => {
 	useEffect(() => {
 		getGlobalProducts();
 	}, []);
+   
+    const [typeSelected, setTypeSelected] = useState({
+        cargo:false,
+        chandal:false,
+        jogger:false,
+    });
+
+    const [filteredProducts, setfilteredProducts] = useState([]);
+
+    const handleCheckbox = e => {
+
+        setTypeSelected({
+            ...typeSelected,
+            [e.target.name]: e.target.checked,
+        })
+        if (e.target.checked) {
+			const filteredResults = allProducts.filter(product =>
+				product.types
+					.map(type => type.type.name)
+					.includes(e.target.name)
+			);
+			setfilteredProducts([...filteredProducts, ...filteredResults]);
+		} else {
+			const filteredResults = filteredProducts.filter(
+				product =>
+					!product.types
+						.map(type => type.type.name)
+						.includes(e.target.name)
+			);
+			setfilteredProducts([...filteredResults]);
+		}
+
+    }
+
 
 	return (
 		<ProductContext.Provider
 			value={{
 			  allProducts,
-        onInputChange,
-        valueSearch,
-        onResetForm,     
+              onInputChange,
+              valueSearch,
+              onResetForm,     
+              active,
+              setActive,
+              handleCheckbox,
+              filteredProducts,
 			}}
 		>
 			{children}
