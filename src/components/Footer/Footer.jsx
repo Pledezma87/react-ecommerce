@@ -8,7 +8,7 @@ function Footer() {
 
     <div className='titles'>
         <div className='ayuda'>
-           <a href=''>ayuda</a>
+           <a href=''>Ayuda</a>
               <ul>
               <li><span>Preguntas frecuentes</span></li>
               <li><span>Estado de mi pedido</span></li>
@@ -30,7 +30,7 @@ function Footer() {
                <li><span>Trabaja con nosotros</span></li>
             </ul>
         </div>    
-        <div className='Follow'>
+            <div className='Follow'>
             <a href=''>Follow us!</a>
         </div>
     </div>
@@ -54,5 +54,4 @@ function Footer() {
     </div>
   );
 };
-
 export default Footer;

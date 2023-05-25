@@ -1,10 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .footer {
-  background-color: #cb1717;
+  background-color: #f6f2f2ed;
   padding: 20px;
 }
 
@@ -12,40 +7,57 @@
   display: flex;
   justify-content: space-between;
 }
-
-.ayuda, .empresa, .Follow {
-  margin-bottom: 10px;
+.titles .ayuda a,
+.titles .empresa a,
+.Follow a {
+  color: #151414;
 }
 
-.ayuda a, .empresa a, .Follow a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
 
-.ayuda ul, .empresa ul {
-  list-style-type: none;
-  padding: 0;
+.titles ul {
+  list-style: none;
+  padding: 5px; 
+  color: #8f8989;
 }
-
-.ayuda li, .empresa li {
-  margin-bottom: 5px;
+.titles ul li:hover span{
+    color:black;
 }
-
+.titles ul li span{
+    display: online-block;
+    transition: color o,3s ease;
+}
+.titles li {
+  margin-bottom:10px;
+}
+.Follow{
+    margin-bottom: 5px;
+}
 .iconosrrss {
-  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom:10px;
+  align-items: flex-start;
+  
 }
+
 
 .iconosrrss a {
-  margin-right: 10px;
+  margin-right:10px;
+  transition: transform 0.4s ease;
+}
+.iconosrrss a:hover {
+    transform: translateX(5px);
 }
 
-.iconosrrss a svg {
-  width: 20px;
+.iconosrrss svg {
+  width: 30px;
+  height: 25px;
+  fill: rgb(19, 21, 16);
+  
+}
+.icon {
+  width: 30px;
   height: 20px;
-  fill: #333;
-}
-
-.iconosrrss a:hover svg {
-  fill: #ff0000;
+  border-radius: 50%;
+  background-color: #f11515;
 }
