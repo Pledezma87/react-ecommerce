@@ -21,6 +21,7 @@ export const ProductProvider = ({ children }) => {
             name: item.name,
             price: item.price,
             img: item.img,
+            category: item.category,
             //   sizes: item.sizes,
           }));
           console.log(productsData);
@@ -34,32 +35,29 @@ export const ProductProvider = ({ children }) => {
 	}, []);
    
     const [typeSelected, setTypeSelected] = useState({
-        cargo:false,
-        chandal:false,
-        jogger:false,
+        Cargo:false,
+        Chandal:false,
+        Jogger:false,
     });
 
     const [filteredProducts, setfilteredProducts] = useState([]);
 
     const handleCheckbox = e => {
-
+      console.log(e.target.name)
         setTypeSelected({
             ...typeSelected,
             [e.target.name]: e.target.checked,
         })
+        console.log(typeSelected)
         if (e.target.checked) {
 			const filteredResults = allProducts.filter(product =>
-				product.types
-					.map(type => type.type.name)
-					.includes(e.target.name)
+				product.category === e.target.name.toLowerCase()
 			);
+      console.log(filteredResults)
 			setfilteredProducts([...filteredProducts, ...filteredResults]);
 		} else {
 			const filteredResults = filteredProducts.filter(
-				product =>
-					!product.types
-						.map(type => type.type.name)
-						.includes(e.target.name)
+				product => product.category !== e.target.name.toLowerCase()
 			);
 			setfilteredProducts([...filteredResults]);
 		}
