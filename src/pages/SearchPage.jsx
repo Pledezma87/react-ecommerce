@@ -8,6 +8,7 @@ import { useLocation } from 'react-router-dom';
 import { ProductContext } from '../context/ProductContext';
 
 const Product = ({ product, addToCart }) => {
+
     const { name, img, sizes, price } = product;
   
     return (
@@ -22,31 +23,35 @@ const Product = ({ product, addToCart }) => {
   };
 
 function SearchPage() {
+
     const {allProducts} = useContext(ProductContext)
     const location = useLocation()
     console.log(location.state)
     const filteredProducts = allProducts.filter(product =>
-		product.name.includes(location.state.toLowerCase())
-	);
+		  product.name.includes(location.state.toLowerCase())
+	  );
     console.log(filteredProducts)
-  return ( <>
-  
+
+  return ( 
+    <>
+    
         <Header />
         <div className='productsbanner'> 
-        <img src={slider} className='slider-img'/>
+          <img src={slider} className='slider-img'/>
         </div>
         <Filter />
-            <div className="card-container"> 
-      {filteredProducts.map((product) => (
-        <Product
-          key={product.id}
-          product={product}
-        />
-      ))}
+        <div className="card-container"> 
+          {filteredProducts.map((product) => (
+            <Product
+            key={product.id}
+            product={product}
+            />
+          ))}
         </div>
         <Footer />
         
-          </> );      
+    </> 
+  );      
 };
 
 export default SearchPage;

@@ -7,6 +7,7 @@ import { ProductProvider } from './context/ProductProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
     <ProductProvider>
     <App />

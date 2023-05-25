@@ -2,16 +2,18 @@ import { useEffect, useState } from 'react';
 import { useForm } from '../hook/useForm';
 import { ProductContext } from './ProductContext';
 
-
 export const ProductProvider = ({ children }) => {
-	const [allProducts, setAllProducts] = useState([]);
 	
-    const { valueSearch, onInputChange, onResetForm } = useForm({
+  const [allProducts, setAllProducts] = useState([]);
+
+  const [active, setActive] = useState(false);
+  
+  const { valueSearch, onInputChange, onResetForm } = useForm({
 		valueSearch: '',
 	});
     
 	const getGlobalProducts = async () => {
-        fetch('http://localhost:3005/stock')
+        fetch('http://localhost:3000/stock')
         .then((response) => response.json())
         .then((data) => {
           const productsData = data.map((item) => ({
@@ -19,6 +21,7 @@ export const ProductProvider = ({ children }) => {
             name: item.name,
             price: item.price,
             img: item.img,
+            category: item.category,
             //   sizes: item.sizes,
           }));
           console.log(productsData);
@@ -27,20 +30,52 @@ export const ProductProvider = ({ children }) => {
         .catch((error) => console.log(error));
 	};
 
-
-
 	useEffect(() => {
 		getGlobalProducts();
 	}, []);
+   
+    const [typeSelected, setTypeSelected] = useState({
+        Cargo:false,
+        Chandal:false,
+        Jogger:false,
+    });
 
-	// BTN CARGAR MÁS
+    const [filteredProducts, setfilteredProducts] = useState([]);
+
+    const handleCheckbox = e => {
+      console.log(e.target.name)
+        setTypeSelected({
+            ...typeSelected,
+            [e.target.name]: e.target.checked,
+        })
+        console.log(typeSelected)
+        if (e.target.checked) {
+			const filteredResults = allProducts.filter(product =>
+				product.category === e.target.name.toLowerCase()
+			);
+      console.log(filteredResults)
+			setfilteredProducts([...filteredProducts, ...filteredResults]);
+		} else {
+			const filteredResults = filteredProducts.filter(
+				product => product.category !== e.target.name.toLowerCase()
+			);
+			setfilteredProducts([...filteredResults]);
+		}
+
+    }
+
+
 	return (
 		<ProductContext.Provider
 			value={{
-			allProducts,
-            onInputChange,
-            valueSearch,
-            onResetForm,     
+			  allProducts,
+              onInputChange,
+              valueSearch,
+              onResetForm,     
+              active,
+              setActive,
+              handleCheckbox,
+              filteredProducts,
 			}}
 		>
 			{children}
