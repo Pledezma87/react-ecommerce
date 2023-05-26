@@ -1,18 +1,18 @@
 import './Cart.css'
 
 import { useId } from 'react'
-import { CartIcon, ClearCartIcon } from './Icons.jsx'
-import { useCart } from '../hooks/useCart.js'
+import { useCart } from '../../hook/useCart'
+import cartIcon from '../../assets/image 5.png';
 
-function CartItem ({ thumbnail, price, title, quantity, addToCart }) {
+function CartItem ({ img, price, name, quantity, addToCart }) {
   return (
     <li>
       <img
-        src={thumbnail}
-        alt={title}
+        src={img}
+        alt={name}
       />
       <div>
-        <strong>{title}</strong> - ${price}
+        <strong>{name}</strong> - ${price}
       </div>
 
       <footer>
@@ -32,7 +32,7 @@ export function Cart () {
   return (
     <>
       <label className='cart-button' htmlFor={cartCheckboxId}>
-        <CartIcon />
+        <img src={cartIcon} alt="" />
       </label>
       <input id={cartCheckboxId} type='checkbox' hidden />
 
@@ -48,7 +48,7 @@ export function Cart () {
         </ul>
 
         <button onClick={clearCart}>
-          <ClearCartIcon />
+          x
         </button>
       </aside>
     </>

@@ -1,8 +1,8 @@
 import { useReducer, createContext } from 'react'
-/* import { cartReducer, cartInitialState } from '../reducers/cart.js' */
+import { cartReducer, cartInitialState } from '../reducers/cart'
 
 export const CartContext = createContext()
-/* 
+
 function useCartReducer () {
   const [state, dispatch] = useReducer(cartReducer, cartInitialState)
 
@@ -20,7 +20,7 @@ function useCartReducer () {
 
   return { state, addToCart, removeFromCart, clearCart }
 }
- */
+
 // la dependencia de usar React Context
 // es MÍNIMA
 export function CartProvider ({ children }) {
