@@ -4,6 +4,8 @@ import ProductsDetails from'./pages/ProductsDetails';
 import HomePage from'./pages/HomePage';
 import React, { useState, useEffect } from 'react';
 import SearchPage from "./pages/SearchPage";
+// import React from 'react';
+
 
 function App() {
 

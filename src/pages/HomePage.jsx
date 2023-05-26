@@ -7,9 +7,8 @@ import {Link} from 'react-router-dom';
 
 function HomePage() {
   return ( <>
-
+        
         <Header />
-
         <div className='banner'>
             <div className='banerwomen'>
             <img src={Women} className='banerwomen-img' alt="women"/><h2 className='titlewomen'>WOMEN</h2>

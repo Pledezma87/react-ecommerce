@@ -24,6 +24,19 @@
     display: flex;
     position: relative;
 }
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .carousel img {
+    width: 100%;
+    /* height: 400px; */
+    max-height: 300px;
+    object-fit: cover;
+  } 
 
 .banermen {
     width: 100vw; 
@@ -31,6 +44,7 @@
     align-items: center;
     display: flex;
     position: relative;
+    object-fit: cover;
 }
 
 .banerwomen-img {
@@ -79,17 +93,21 @@
     .banner {
         flex-direction: column; 
         min-width: 50px; min-height: 50px;
+        object-fit: cover;
     }
 
     .banerwomen {
         width: 100%; height: 80%;
+        object-fit: cover;
     }
     
     .banermen {
         width: 100%; height: 80%;
+        object-fit: cover;
     }
     .banermen-img{
         width: 100vw;
+        object-fit: cover;
     }
 }
 
@@ -98,14 +116,15 @@
 .slider-img {
     height: 100%;
     width: 100%;   
-    object-fit: cover;
+    
+    /* object-fit: cover, */
 }
 
-.productsbanner {
+/* .productsbanner {
     width: 100%;
     height: 500px;
     padding-bottom: 30px;
-}
+} */
 
 
 /*MEDIA QUERY PRODUCTS*/ 
@@ -115,7 +134,8 @@
         padding-bottom: 10px;
         display: flex;
         width: 100%;
-        height: 100%;
+       
+        
     }
 
 }
