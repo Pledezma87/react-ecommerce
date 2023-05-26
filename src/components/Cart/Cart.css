@@ -13,6 +13,10 @@
     border-color: #0a0909;
     border-width: 1px;
   }
+
+  .cart::-webkit-scrollbar {
+    display: none;
+}
   
   .cart img {
     height: 130px;
@@ -64,3 +68,18 @@
     height: 100%;
     display: block;
   }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+  
+/*MEDIA QUERY PRODUCTS*/ 
+@media (max-width: 850px) {
+
+  .cart{
+    width: 100%;
+  }
+
+    
+
+}

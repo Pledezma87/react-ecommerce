@@ -1,4 +1,4 @@
-import React, { useState, useContext }  from 'react';
+import React, { useEffect,useState, useContext }  from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import  Navbar from '../../components/Navbar/Navbar';
 import logo from '../../assets/PushPull_Logo_Black_on_Transparent.png';
@@ -20,9 +20,27 @@ function Header() {
 		onResetForm();
 	};
 
+  const [isHeaderFixed, setHeaderFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setHeaderFixed(true);
+      } else {
+        setHeaderFixed(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
 
-      <div className='container-header'>
+    <div className={`container-header ${isHeaderFixed ? 'header-fixed' : ''}`}>
 
         <div className='container-navbar'>
           <Navbar />
