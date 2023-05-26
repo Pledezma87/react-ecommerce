@@ -1,9 +1,14 @@
 import React, { useState, useEffect, useContext} from 'react';
 import { ProductContext } from '../../context/ProductContext';
 import './Cards.css'; 
+import { useCart } from '../../hook/useCart';
 
-const Product = ({ product, addToCart }) => {
+
+
+
+const Product = ({ product}) => {
   const { name, img, sizes, price } = product;
+  const { addToCart} = useCart()
 
   return (
 
@@ -18,7 +23,7 @@ const Product = ({ product, addToCart }) => {
   );
 };
 
-const Cards = ({ addToCart }) => {
+const Cards = () => {
 const {allProducts, filteredProducts} = useContext(ProductContext)
 
 
@@ -32,7 +37,7 @@ const {allProducts, filteredProducts} = useContext(ProductContext)
                 <Product
                  key={product.id}
                   product={product}
-                 addToCart={addToCart}
+
             />
             ))}
             </>
@@ -42,7 +47,7 @@ const {allProducts, filteredProducts} = useContext(ProductContext)
               <Product
               key={product.id}
               product={product}
-              addToCart={addToCart}
+
             />
             ))}
             </>
