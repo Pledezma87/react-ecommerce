@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useContext} from 'react';
+import React, { useContext} from 'react';
 import { ProductContext } from '../../context/ProductContext';
 import './Cards.css'; 
 import { useCart } from '../../hook/useCart';
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,8 +14,8 @@ const Product = ({ product}) => {
   return (
 
     <div className="cards"> 
-      <img src={img} alt={name} />
-      <h2>{name}</h2>
+      <Link to={`/products/${product.id}`}><img src={img} alt={name} /></Link>
+      <Link to={`/products/${product.id}`}><h2>{name}</h2></Link>
       {/* <p>Tallas: {sizes}</p> */}
       <p>${price}</p>
       <button className='btncomprar' onClick={() => addToCart(product)}>Añadir al carrito</button>

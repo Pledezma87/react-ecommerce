@@ -8,10 +8,11 @@
     color: white;
     position: absolute;
     overflow: auto;
-    z-index: 9;
+    z-index: 99999;
     scrollbar-color: none;
     border-color: #0a0909;
     border-width: 1px;
+    max-height:550px;
   }
 
   .cart::-webkit-scrollbar {
@@ -177,7 +178,7 @@
     top: 8px;
     transition: all .3s ease;
     width: 32px;
-    z-index: 9999;
+    z-index: 99;
     margin-top: 90px;
   }
   
@@ -193,7 +194,8 @@
   .no-scroll {
     overflow: hidden;
   }
-  
+
+
 /*MEDIA QUERY PRODUCTS*/ 
 @media (max-width: 850px) {
 

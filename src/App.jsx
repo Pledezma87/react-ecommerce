@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import ProductsPage from './pages/ProductsPage';
 import ProductsDetails from'./pages/ProductsDetails';
 import HomePage from'./pages/HomePage';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import SearchPage from "./pages/SearchPage";
 
 function App() {

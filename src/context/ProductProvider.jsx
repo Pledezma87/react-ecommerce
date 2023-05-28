@@ -30,6 +30,16 @@ export const ProductProvider = ({ children }) => {
         .catch((error) => console.log(error));
 	};
 
+  const getProductsByID = async (id) => {
+
+    const baseURL = "http://localhost:3000/stock"
+		const res = await fetch(`${baseURL}/${id}`)
+        const data = await res.json();
+        
+        return data
+
+  }
+
 	useEffect(() => {
 		getGlobalProducts();
 	}, []);
@@ -76,6 +86,7 @@ export const ProductProvider = ({ children }) => {
               setActive,
               handleCheckbox,
               filteredProducts,
+              getProductsByID,
 			}}
 		>
 			{children}

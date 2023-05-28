@@ -1,7 +1,7 @@
 import './Cart.css'
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { useId, useEffect, useState } from 'react'
+import { React, useId, useEffect, useState} from 'react'
 import { useCart } from '../../hook/useCart'
 import cartIcon from '../../assets/image 5.png';
 
@@ -22,7 +22,7 @@ function CartItem ({ img, price, name, quantity, addToCart, deleteFromCart, remo
       <div className='titulo'>
         <strong>{name}</strong>
         <span>Precio: ${price}</span>
-      </div>
+      </div>    
 
       <footer >
         <div className='cantidad'>
@@ -79,8 +79,13 @@ export function Cart () {
   const cartCheckboxId = useId()
   const { cart, clearCart, addToCart, removeFromCart, deleteFromCart } = useCart()
 
+
   useEffect(() => {
-    document.body.classList.toggle('no-scroll', isCartOpen); // Aplica o remueve la clase 'no-scroll' en el body según el estado del carrito
+    if (isCartOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
   }, [isCartOpen]);
 
 
@@ -98,7 +103,7 @@ export function Cart () {
       {isCartOpen && (
         <aside className='cart'>
         <ul>
-          {cart.map(product => (
+          {cart.map((product) => (
             <CartItem
               key={product.id}
               addToCart={() => addToCart(product)}
