@@ -16,21 +16,27 @@ function useCartReducer () {
     payload: product
   })
 
+  const deleteFromCart = product => dispatch({
+    type: 'DELETE_FROM_CART',
+    payload: product
+  })
+
   const clearCart = () => dispatch({ type: 'CLEAR_CART' })
 
-  return { state, addToCart, removeFromCart, clearCart }
+  return { state, addToCart, removeFromCart, deleteFromCart, clearCart }
 }
 
 // la dependencia de usar React Context
 // es MÍNIMA
 export function CartProvider ({ children }) {
-  const { state, addToCart, removeFromCart, clearCart } = useCartReducer()
+  const { state, addToCart, removeFromCart, deleteFromCart, clearCart } = useCartReducer()
 
   return (
     <CartContext.Provider value={{
       cart: state,
       addToCart,
       removeFromCart,
+      deleteFromCart,
       clearCart
     }}
     >

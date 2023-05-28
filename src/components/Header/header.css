@@ -46,6 +46,10 @@
     padding: 5px;
 }
 
+.user img{
+    padding: 10px;
+}
+
 @media (max-width: 600px){
 
     .searchbar{

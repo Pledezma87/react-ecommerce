@@ -1,35 +1,83 @@
 import './Cart.css'
-
-import { useId, useState, useEffect } from 'react'
+import {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { useId, useEffect, useState } from 'react'
 import { useCart } from '../../hook/useCart'
 import cartIcon from '../../assets/image 5.png';
 
-function CartItem ({ img, price, name, quantity, addToCart }) {
+function CartItem ({ img, price, name, quantity, addToCart, deleteFromCart, removeFromCart }) {
+
+  // const total = calculateTotalPriceArt({ price, quantity });
+
   return (
-    <li>
+    <div className='art'>
+
       <img
         src={img}
         alt={name}
       />
-      <div>
-        <strong>{name}</strong> - ${price}
+
+      <div className='detalle'>
+
+      <div className='titulo'>
+        <strong>{name}</strong>
+        <span>Precio: ${price}</span>
       </div>
 
-      <footer>
-        <button onClick={addToCart}>-</button>
-        <small>
-          Qty: {quantity}
-        </small>
-        <button onClick={addToCart}>+</button>
+      <footer >
+        <div className='cantidad'>
+          <button className='mas' onClick={addToCart}>+</button>
+          <span>{quantity}</span> 
+          <button className='menos' onClick={removeFromCart}>-</button>
+        </div>
+
+        <div className='papelera'>
+          <button className='papelerabtn' onClick={deleteFromCart}>
+            <FontAwesomeIcon icon={faTrash} />
+          </button>
+        </div>
       </footer>
-    </li>
+
+      </div>
+
+      {/* <div className='totalart'>
+        <span>Precio total: </span>
+      </div> */}
+
+    </div>
   )
+}
+
+// function calculateTotalPriceArt(product) {
+//   const { price, quantity } = product;
+//   return price * quantity;
+// }
+
+// function calculateTotalPriceArt(CartItem){
+//   let totalPriceArt = 0;
+//   CartItem.forEach(product => {
+//     const productPrice = product.price * product.quantity;
+//   });
+//   return totalPriceArt;
+// }
+
+
+
+function calculateTotalPrice(cart) {
+  let totalPrice = 0;
+
+  cart.forEach(product => {
+    const productPrice = product.price * product.quantity;
+    totalPrice += productPrice;
+  });
+  
+  return  totalPrice 
 }
 
 export function Cart () {
   const [isCartOpen, setCartOpen] = useState(false)
   const cartCheckboxId = useId()
-  const { cart, clearCart, addToCart } = useCart()
+  const { cart, clearCart, addToCart, removeFromCart, deleteFromCart } = useCart()
 
   useEffect(() => {
     document.body.classList.toggle('no-scroll', isCartOpen); // Aplica o remueve la clase 'no-scroll' en el body según el estado del carrito
@@ -48,20 +96,35 @@ export function Cart () {
       <input id={cartCheckboxId} type='checkbox' hidden />
 
       {isCartOpen && (
-        <aside className="cart">
-          <ul>
-            {cart.map((product) => (
-              <CartItem
-                key={product.id}
-                addToCart={() => addToCart(product)}
-                {...product}
-              />
-            ))}
-          </ul>
+        <aside className='cart'>
+        <ul>
+          {cart.map(product => (
+            <CartItem
+              key={product.id}
+              addToCart={() => addToCart(product)}
+              removeFromCart={() => removeFromCart(product)}
+              deleteFromCart={() => deleteFromCart(product)}
+              {...product}
+            />
+          ))}
+        </ul>
 
-          <button onClick={clearCart}>x</button>
-        </aside>
+        <hr />
+
+            <div className='total'>
+              <span>Precio total: {calculateTotalPrice(cart)} </span>
+            </div>
+
+        <hr />
+
+        <div className='delcont'>
+          <button className='delete' onClick={clearCart}>
+            Delete all
+          </button>
+        </div>
+      </aside>
       )}
+      
     </>
   );
 }
