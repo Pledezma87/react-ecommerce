@@ -46,14 +46,6 @@ function ProductsPage() {
     <CartProvider>
       <Header />
       <Carousel />
-      <div className='productsbanner'> 
-        {/* <img src={slider} className='slider-img'/> */}
-      </div>
-  
-
-          <div className='productsbanner'> 
-            <img src={slider} className='slider-img'/>
-          </div>
       <Cart />
       <Filter />
       <Cards />
