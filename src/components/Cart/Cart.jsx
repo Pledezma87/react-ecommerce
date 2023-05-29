@@ -1,55 +1,113 @@
 import './Cart.css'
-
+import {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { useId } from 'react'
-import { CartIcon, ClearCartIcon } from './Icons.jsx'
-import { useCart } from '../hooks/useCart.js'
+import { useCart } from '../../hook/useCart'
+import cartIcon from '../../assets/image 5.png';
 
-function CartItem ({ thumbnail, price, title, quantity, addToCart }) {
+
+function calculateItemTotalPrice(price, quantity) {
+  return price * quantity;
+}
+
+function CartItem ({ img, price, name, quantity, addToCart, deleteFromCart, removeFromCart }) {
+
   return (
-    <li>
+    <div className='art'>
+
       <img
-        src={thumbnail}
-        alt={title}
+        src={img}
+        alt={name}
       />
-      <div>
-        <strong>{title}</strong> - ${price}
+
+      <div className='detalle'>
+
+        <div className='titulo'>
+          <span className='nombreuno'>{name}</span>
+          <span className='preciouno'>Precio Unitario: {price}€</span>
+        </div>
+
+        <footer >
+          <div className='cantidad'>
+            <button className='menos' onClick={removeFromCart}>-</button>
+            <span>{quantity}</span> 
+            <button className='mas' onClick={addToCart}>+</button>
+          </div>
+        
+          <div className='papelera'>
+            <button className='papelerabtn' onClick={deleteFromCart}>
+              <FontAwesomeIcon icon={faTrash} />
+            </button>
+          </div>
+        </footer>
+
+        <div>
+          <span>Precio Artículo total: {calculateItemTotalPrice(price, quantity).toFixed(2)}€</span>
+        </div>
+
       </div>
 
-      <footer>
-        <small>
-          Qty: {quantity}
-        </small>
-        <button onClick={addToCart}>+</button>
-      </footer>
-    </li>
+    </div>
   )
+}
+
+
+function calculateTotalPrice(cart) {
+  let totalPrice = 0;
+
+  cart.forEach(product => {
+    const productPrice = product.price * product.quantity;
+    totalPrice += productPrice;
+  });
+  
+  return  totalPrice 
 }
 
 export function Cart () {
   const cartCheckboxId = useId()
-  const { cart, clearCart, addToCart } = useCart()
+  const { cart, clearCart, addToCart, removeFromCart, deleteFromCart } = useCart()
 
   return (
     <>
       <label className='cart-button' htmlFor={cartCheckboxId}>
-        <CartIcon />
+        <img src={cartIcon} alt="" />
       </label>
       <input id={cartCheckboxId} type='checkbox' hidden />
 
       <aside className='cart'>
-        <ul>
-          {cart.map(product => (
-            <CartItem
-              key={product.id}
-              addToCart={() => addToCart(product)}
-              {...product}
-            />
-          ))}
-        </ul>
 
-        <button onClick={clearCart}>
-          <ClearCartIcon />
-        </button>
+        <header className='artics'>
+          Artículos
+        </header>
+
+        <hr />
+
+          <ul>
+            {cart.map(product => (
+              <CartItem
+                key={product.id}
+                removeFromCart={() => removeFromCart(product)}
+                addToCart={() => addToCart(product)}
+                deleteFromCart={() => deleteFromCart(product)}
+                {...product}
+              />
+            ))} 
+          </ul>
+
+        <hr />
+
+        <div className='total'>
+          <span>Precio total: {calculateTotalPrice(cart).toFixed(2)}€ </span>
+        </div>
+
+        <hr />
+
+        <div className='delcont'>
+          <button className='delete' onClick={clearCart}>
+            Delete all
+          </button>
+        </div>
+
       </aside>
     </>
   )

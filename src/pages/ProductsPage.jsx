@@ -7,6 +7,8 @@ import { ProductContext } from '../context/ProductContext';
 import { AiOutlineLeft,AiOutlineRight } from 'react-icons/ai';
 
 // import { Carouse } from '../components/Carousel/';
+import { Cart } from '../components/Cart/Cart';
+import { CartProvider } from '../context/CartContext';
 
 function ProductsPage() {
 
@@ -41,7 +43,7 @@ function ProductsPage() {
 
   return ( 
     <>
-  
+    <CartProvider>
       <Header />
       <Carousel />
       <div className='productsbanner'> 
@@ -49,10 +51,14 @@ function ProductsPage() {
       </div>
   
 
+          <div className='productsbanner'> 
+            <img src={slider} className='slider-img'/>
+          </div>
+      <Cart />
       <Filter />
       <Cards />
       <Footer />
-        
+    </CartProvider>
     </> 
     );      
 };
