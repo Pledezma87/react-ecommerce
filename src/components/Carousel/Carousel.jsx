@@ -3,9 +3,9 @@ import './Carousel.css';
 
 const Carousel = () => {
   const images = [
-    "https://i.postimg.cc/QCh8RFZx/pantalon1.png",
-    "https://i.postimg.cc/pr1HXcWs/pantalon2.png",
-    "https://i.postimg.cc/BZ27SV6b/pantalon3.png",
+    "https://i.postimg.cc/SRmYwnHp/slider3.jpg",
+    "https://i.postimg.cc/4x2vVQqH/slider2.png",
+    "https://i.postimg.cc/LsHdg2d8/emptycart-buy.pngnpm startr",
     "https://i.postimg.cc/zBg1d2Zk/slider.png"
     // Agrega más rutas de imágenes aquí
   ];

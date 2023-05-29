@@ -15,7 +15,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-}
+    position: relative; /* Agrega posición relativa al contenedor */
+  }
 
 .banerwomen {
     width: 100vw; 
@@ -24,11 +25,13 @@
     display: flex;
     position: relative;
 }
+
 .carousel {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    position: relative;
   }
   
   .carousel img {
@@ -36,7 +39,21 @@
     /* height: 400px; */
     max-height: 300px;
     object-fit: cover;
-  } 
+    z-index: 3;
+    position: relative;
+  }
+  
+  .carousel .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    z-index: 1;
+  }
 
 .banermen {
     width: 100vw; 

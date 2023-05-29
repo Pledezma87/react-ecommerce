@@ -1,10 +1,11 @@
-import {React,useContext,useState} from 'react';
+import {React,useContext,useState,} from 'react';
 import Header from'../components/Header/Header';
 import Footer from'../components/Footer/Footer';
 import Cards from'../components/Cards/Cards';
 import Filter from'../components/Filter/Filter';
-import slider from'../assets/slider.png';
 import { ProductContext } from '../context/ProductContext';
+import { AiOutlineLeft,AiOutlineRight } from 'react-icons/ai';
+
 // import { Carouse } from '../components/Carousel/';
 
 function ProductsPage() {
@@ -13,10 +14,9 @@ function ProductsPage() {
 
   const Carousel = () => {
     const images = [
-      "https://i.postimg.cc/7h8JczpF/banner2.jpg",
-      "https://i.postimg.cc/HWzTFXDb/banner3.jpg",
-      "https://i.postimg.cc/DwXkfbDj/banner1.webp",
-      // Agrega más rutas de imágenes aquí
+      "https://i.postimg.cc/SRmYwnHp/slider3.jpg",
+      "https://i.postimg.cc/4x2vVQqH/slider2.png",
+      "https://i.postimg.cc/zBg1d2Zk/slider.png",
     ];
   
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -31,9 +31,9 @@ function ProductsPage() {
   
     return (
       <div className="carousel">
-        <button onClick={previousImage}>Previous</button>
+        <button onClick={previousImage}><AiOutlineLeft/></button>
         <img src={images[currentImageIndex]} alt="Carousel Image" />
-        <button onClick={nextImage}>Next</button>
+        <button onClick={nextImage}><AiOutlineRight/></button>
       </div>
     );
   };
