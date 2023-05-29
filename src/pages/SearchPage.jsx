@@ -6,11 +6,15 @@ import Filter from'../components/Filter/Filter';
 import slider from'../assets/slider.png';
 import { useLocation } from 'react-router-dom';
 import { ProductContext } from '../context/ProductContext';
+import { Cart } from '../components/Cart/Cart';
+import { useCart } from '../hook/useCart';
 
-const Product = ({ product, addToCart }) => {
+
+const Product = ({ product }) => {
 
     const { name, img, sizes, price } = product;
-  
+    const { cart, clearCart, addToCart, removeFromCart, deleteFromCart } = useCart()
+
     return (
       <div className="cards"> 
         <img src={img} alt={name} />
@@ -31,6 +35,7 @@ function SearchPage() {
 		  product.name.includes(location.state.toLowerCase())
 	  );
     console.log(filteredProducts)
+    
 
   return ( 
     <>
@@ -40,6 +45,7 @@ function SearchPage() {
           <img src={slider} className='slider-img'/>
         </div>
         <Filter />
+        <Cart />
         <div className="card-container"> 
           {filteredProducts.map((product) => (
             <Product
