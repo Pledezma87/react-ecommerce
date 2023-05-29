@@ -4,21 +4,20 @@ import Footer from'../components/Footer/Footer';
 import Cards from'../components/Cards/Cards';
 import Filter from'../components/Filter/Filter';
 import slider from'../assets/slider.png';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link} from 'react-router-dom';
 import { ProductContext } from '../context/ProductContext';
-import { Cart } from '../components/Cart/Cart';
-import { useCart } from '../hook/useCart';
+import { useCart } from "../hook/useCart"
 
-
-const Product = ({ product }) => {
+const Product = ({ product}) => {
+  console.log(product)
 
     const { name, img, sizes, price } = product;
-    const { cart, clearCart, addToCart, removeFromCart, deleteFromCart } = useCart()
+    const { addToCart} = useCart()
 
     return (
       <div className="cards"> 
-        <img src={img} alt={name} />
-        <h2>{name}</h2>
+        <Link to={`/products/${product.id}`}><img src={img} alt={name} /></Link>
+        <Link to={`/products/${product.id}`}><h2>{name}</h2></Link>
         {/* <p>Tallas: {sizes}</p> */}
         <p>${price}</p>
         <button className='btncomprar' onClick={() => addToCart(product)}>Añadir al carrito</button>
@@ -26,16 +25,18 @@ const Product = ({ product }) => {
     );
   };
 
+
+  
+
 function SearchPage() {
 
     const {allProducts} = useContext(ProductContext)
     const location = useLocation()
-    console.log(location.state)
+/*     console.log(location.state) */
     const filteredProducts = allProducts.filter(product =>
 		  product.name.includes(location.state.toLowerCase())
 	  );
-    console.log(filteredProducts)
-    
+    /* console.log(filteredProducts) */
 
   return ( 
     <>
@@ -45,7 +46,6 @@ function SearchPage() {
           <img src={slider} className='slider-img'/>
         </div>
         <Filter />
-        <Cart />
         <div className="card-container"> 
           {filteredProducts.map((product) => (
             <Product

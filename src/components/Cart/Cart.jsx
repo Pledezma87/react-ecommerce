@@ -1,7 +1,7 @@
 import './Cart.css'
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { useId } from 'react'
+import { React, useId, useEffect, useState, useContext} from 'react'
 import { useCart } from '../../hook/useCart'
 import cartIcon from '../../assets/image 5.png';
 
@@ -64,18 +64,36 @@ function calculateTotalPrice(cart) {
 }
 
 export function Cart () {
+  const [isCartOpen, setCartOpen] = useState(false)
   const cartCheckboxId = useId()
   const { cart, clearCart, addToCart, removeFromCart, deleteFromCart } = useCart()
 
+
+  useEffect(() => {
+    if (isCartOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [isCartOpen]);
+
+
+  const toggleCart = () => {
+    setCartOpen((prevOpen) => !prevOpen); // Invierte el valor actual de isCartOpen
+  };
+
+
+
   return (
     <>
-      <label className='cart-button' htmlFor={cartCheckboxId}>
+      <label className='cart-button' htmlFor={cartCheckboxId}  onClick={toggleCart}>
         <img src={cartIcon} alt="" />
       </label>
       <input id={cartCheckboxId} type='checkbox' hidden />
 
-      <aside className='cart'>
-
+      {isCartOpen && (
+        <aside className='cart'>
+            
         <header className='artics'>
           Artículos
         </header>
@@ -109,6 +127,8 @@ export function Cart () {
         </div>
 
       </aside>
+      )}
+      
     </>
-  )
+  );
 }
