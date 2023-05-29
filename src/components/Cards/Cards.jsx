@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Product = ({ product}) => {
+export const Product = ({ product}) => {
   const { name, img, sizes, price } = product;
   const { addToCart} = useCart()
 

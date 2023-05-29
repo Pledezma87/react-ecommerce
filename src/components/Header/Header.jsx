@@ -7,6 +7,7 @@ import user from '../../assets/image 6.png';
 import lupa from '../../assets/search.png';
 import './header.css';
 import { ProductContext } from '../../context/ProductContext';
+import { Cart } from '../Cart/Cart';
 
 function Header() {
 
@@ -74,9 +75,7 @@ function Header() {
             <a href=""> <img src={user} alt="user" /></a>
           </div>
 
-          {/* <div className='cart'>
-            <a href=""> <img src={cartIcon} alt="cart" /></a>
-          </div> */}
+          <Cart />
           
         </div>
 

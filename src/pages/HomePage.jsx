@@ -4,6 +4,7 @@ import Footer from'../components/Footer/Footer';
 import Women from '../assets/homewoman.png';
 import Men from '../assets/homeman.png';
 import {Link} from 'react-router-dom';
+import { Cart } from '../components/Cart/Cart';
 
 function HomePage() {
   return ( <>

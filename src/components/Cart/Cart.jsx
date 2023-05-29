@@ -1,9 +1,13 @@
 import './Cart.css'
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { React, useId, useEffect, useState} from 'react'
+import { React, useId, useEffect, useState, useContext} from 'react'
 import { useCart } from '../../hook/useCart'
 import cartIcon from '../../assets/image 5.png';
+
+
+
+
 
 function CartItem ({ img, price, name, quantity, addToCart, deleteFromCart, removeFromCart }) {
 
@@ -93,6 +97,8 @@ export function Cart () {
     setCartOpen((prevOpen) => !prevOpen); // Invierte el valor actual de isCartOpen
   };
 
+
+
   return (
     <>
       <label className='cart-button' htmlFor={cartCheckboxId}  onClick={toggleCart}>
@@ -105,7 +111,7 @@ export function Cart () {
         <ul>
           {cart.map((product) => (
             <CartItem
-              key={product.id}
+              key={product.id} 
               addToCart={() => addToCart(product)}
               removeFromCart={() => removeFromCart(product)}
               deleteFromCart={() => deleteFromCart(product)}
