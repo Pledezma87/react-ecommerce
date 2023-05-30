@@ -4,8 +4,7 @@ import'./footer.css'
 function Footer() {
   return (
 
-    <div></div>
-/* 
+
     <div className='footer'>
 
       <div className='titles'>
@@ -74,7 +73,7 @@ function Footer() {
 
       </div>
 
-    </div> */
+    </div>
        
     
   );
