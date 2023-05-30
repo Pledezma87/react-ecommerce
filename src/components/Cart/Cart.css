@@ -55,17 +55,17 @@
 
   .mas{
     display: inline-block; /* para hacer el botón horizontal */
-  background-color: #09080c;
-  border-radius: 4px;
-  border: none;
-  color: white;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.5s ease-out;
+    background-color: #09080c;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease-out;
   /*padding: 10px 25px; */ /* ajusta el padding para darle un tamaño adecuado */
-  font-family:inherit;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
+    font-family:inherit;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
   }
 
   .mas:hover{
@@ -74,17 +74,17 @@
 
   .menos{
     display: inline-block; /* para hacer el botón horizontal */
-  background-color: #09080c;
-  border-radius: 4px;
-  border: none;
-  color: white;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.5s ease-out;
+    background-color: #09080c;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease-out;
   /*padding: 10px 25px; */ /* ajusta el padding para darle un tamaño adecuado */
-  font-family:inherit;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
+    font-family:inherit;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
   }
 
   .menos:hover{
@@ -98,17 +98,17 @@
 
   .papelerabtn{
     display: inline-block; /* para hacer el botón horizontal */
-  background-color: #09080c;
-  border-radius: 4px;
-  border: none;
-  color: white;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.5s ease-out;
+    background-color: #09080c;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease-out;
   /*padding: 10px 25px; */ /* ajusta el padding para darle un tamaño adecuado */
-  font-family:inherit;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
+    font-family:inherit;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
   }
 
   .papelerabtn:hover{
@@ -148,18 +148,18 @@
 
   .delete{
     display: inline-block; /* para hacer el botón horizontal */
-  background-color: #09080c;
-  border-radius: 4px;
-  border: none;
-  color: white;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.5s ease-out;
+    background-color: #09080c;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease-out;
   /*padding: 10px 25px; */ /* ajusta el padding para darle un tamaño adecuado */
-  font-family:inherit;
-  height: 50px;
-  width: 100px;
-  cursor: pointer;
-  font-size: larger;
+    font-family:inherit;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    font-size: larger;
   }
 
   .delete:hover{

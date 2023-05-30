@@ -1,5 +1,7 @@
 import {React,useState} from 'react';
+import {AiOutlineLeft,AiOutlineRight} from 'react-icons/ai';
 import './Carousel.css';
+
 
 const Carousel = () => {
   const images = [
@@ -21,10 +23,10 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel">
-      <button onClick={previousImage}>Previous</button>
-      <img src={images[currentImageIndex]} alt="Carousel Image" />
-      <button onClick={nextImage}>Next</button>
+    <div className='carousel'>
+      <button className='botonizq' onClick={previousImage}>Previous</button>
+      <img className='imagenes' src={images[currentImageIndex]} alt="Carousel Image" />
+      <button className='botondrch' onClick={nextImage}>Next</button>
     </div>
   );
 };

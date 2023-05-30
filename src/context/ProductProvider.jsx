@@ -22,7 +22,7 @@ export const ProductProvider = ({ children }) => {
             price: item.price,
             img: item.img,
             category: item.category,
-            //   sizes: item.sizes,
+            description: item.description,
           }));
           console.log(productsData);
           setAllProducts(productsData);
