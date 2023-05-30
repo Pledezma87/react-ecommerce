@@ -2,12 +2,11 @@ import React, { useEffect,useState, useContext }  from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import  Navbar from '../../components/Navbar/Navbar';
 import logo from '../../assets/PushPull_Logo_Black_on_Transparent.png';
-import cartIcon from '../../assets/image 5.png';
 import user from '../../assets/image 6.png';
 import lupa from '../../assets/search.png';
 import './header.css';
 import { ProductContext } from '../../context/ProductContext';
-import { Cart } from '../Cart/Cart';
+
 
 function Header() {
 
