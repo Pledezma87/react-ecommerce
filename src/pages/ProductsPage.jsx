@@ -33,9 +33,9 @@ function ProductsPage() {
   
     return (
       <div className="carousel">
-        <button onClick={previousImage}><AiOutlineLeft/></button>
-        <img src={images[currentImageIndex]} alt="Carousel Image" />
-        <button onClick={nextImage}><AiOutlineRight/></button>
+        <button className='botonizq' onClick={previousImage}><AiOutlineLeft/></button>
+        <img className='imagenes' src={images[currentImageIndex]} alt="CarouselImage" />
+        <button className='botondrch' onClick={nextImage}><AiOutlineRight/></button>
       </div>
     );
   };

@@ -228,6 +228,7 @@
     margin-top: 60px;
     
   }
+  /* carousel */
   .carousel{
     width: 100%;
     position: relative;
@@ -243,13 +244,31 @@
 }
 
 .botonizq{
-    /* position: absolute; */
+    position:absolute; 
     border: none;
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    align-items: center;
+    bottom: 50%;
+    z-index: 1;
+    background-color: #e4e1e1b4;
+    left: 2.5%;
+    cursor: pointer;
+
 }
 
 .botondrch{
     position: absolute;
-    border: none;
+    border: none; 
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: #e4e1e1b4;
+    left: 95%;
+    bottom: 50%;
+    cursor: pointer;
+   
 }
