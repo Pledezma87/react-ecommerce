@@ -8,7 +8,7 @@ import { Cart } from '../components/Cart/Cart';
 
 function HomePage() {
   return ( <>
-
+        
         <Header />
         <Cart />
 
@@ -18,6 +18,7 @@ function HomePage() {
             </div>
             <div className='banermen'>
             <Link to={`/men`}><img src={Men} className='banermen-img' alt="men"/><h2 className='titlemen'>MEN</h2></Link>
+           
             </div>
         </div>
         <Footer />
