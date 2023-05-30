@@ -59,4 +59,15 @@
     display: none;
     }  
     
+    .imagelogo{
+        max-width: 50px;
+        max-height: 80px;
+        margin-left: 20px;
+    }
+    
+    .user img{
+        margin-right: 5px;
+       padding: 17px;
+    }
+
 }

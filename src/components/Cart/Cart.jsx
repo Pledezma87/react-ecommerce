@@ -87,7 +87,7 @@ export function Cart () {
   return (
     <>
       <label className='cart-button' htmlFor={cartCheckboxId}  onClick={toggleCart}>
-        <img src={cartIcon} alt="" />
+        <img className='cart-img' src={cartIcon} alt="" />
       </label>
       <input id={cartCheckboxId} type='checkbox' hidden />
 

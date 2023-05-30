@@ -75,7 +75,7 @@ function Header() {
             <a href=""> <img src={user} alt="user" /></a>
           </div>
 
-          <Cart />
+         {/*  <Cart /> */}
           
         </div>
 

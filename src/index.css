@@ -41,8 +41,6 @@
 
 .banermen-img {
     object-fit:cover;
-   /*  width:626px;
-    height: 1093px; */
     width: 50vw; 
     height: 100vh;
 }
@@ -90,7 +88,15 @@
     }
     .banermen-img{
         width: 100vw;
+
     }
+}
+
+@media (max-width: 500px) {
+    .banermen-img{
+        height:50vh ;
+    }
+    
 }
 
 /*PRODUCTS*/

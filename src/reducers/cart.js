@@ -1,5 +1,9 @@
+import React, { useState, useEffect } from "react"
+
+
 export const cartInitialState = JSON.parse(window.localStorage.getItem('cart')) || []
 console.log(cartInitialState)
+
 export const CART_ACTION_TYPES = {
   ADD_TO_CART: 'ADD_TO_CART',
   REMOVE_FROM_CART: 'REMOVE_FROM_CART',
@@ -109,3 +113,38 @@ export const cartReducer = (state, action) => {
   console.log(updateState)
   return updateState ? updateState(state, action) : state
 }
+
+/* export const Cartnew = () => {
+  const [cart, setCart] = useState(cartInitialState);
+
+  useEffect(() => {
+    updateLocalStorage(cart);
+  }, [cart]);
+
+  const addToCart = (product) => {
+    setCart((prevCart) => {
+      return cartReducer(prevCart, {
+        type: CART_ACTION_TYPES.ADD_TO_CART,
+        payload: product
+      });
+    });
+  };
+
+  const removeFromCart = (product) => {
+    setCart((prevCart) => {
+      return cartReducer(prevCart, {
+        type: CART_ACTION_TYPES.REMOVE_FROM_CART,
+        payload: product
+      });
+    });
+  };
+
+  const clearCart = () => {
+    setCart((prevCart) => {
+      return cartReducer(prevCart, {
+        type: CART_ACTION_TYPES.CLEAR_CART
+      });
+    });
+  }
+}
+ */

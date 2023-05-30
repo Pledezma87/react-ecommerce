@@ -174,7 +174,7 @@
     height: 32px;
     justify-content: center;
     padding: 4px;
-    position: absolute;
+    position: fixed;
     right: 8px;
     top: 8px;
     transition: all .3s ease;
@@ -183,6 +183,8 @@
     margin-top: 90px;
   }
   
+
+
   .cart-button:hover {
     scale: 1.1;
   }
@@ -197,16 +199,6 @@
   }
 
 
-/*MEDIA QUERY PRODUCTS*/ 
-@media (max-width: 850px) {
-
-  .cart{
-    width: 100%;
-  }
-
-    
-
-}
   .total{
     height: 50px;
     display: flex;
@@ -232,3 +224,25 @@
     font-size: larger;
     font-weight: bold;
   }
+
+
+  
+/*MEDIA QUERY PRODUCTS*/ 
+@media (max-width: 850px) {
+
+  .cart{
+    width: 100%;
+    top:130px
+  }
+
+  .cart-img {
+    margin-top: -98px;
+  }
+
+}
+
+@media (min-width: 600px) {
+  .cart-img {
+    margin-top: -4px;
+  }
+}

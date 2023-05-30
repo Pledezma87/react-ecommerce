@@ -10,6 +10,7 @@ function HomePage() {
   return ( <>
 
         <Header />
+        <Cart />
 
         <div className='banner'>
             <div className='banerwomen'>
