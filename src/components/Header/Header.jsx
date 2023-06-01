@@ -1,9 +1,9 @@
-import React, { useEffect,useState, useContext }  from 'react';
+import React, { useEffect, useState, useContext }  from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import  Navbar from '../../components/Navbar/Navbar';
 import logo from '../../assets/PushPull_Logo_Black_on_Transparent.png';
 import user from '../../assets/image 6.png';
-import lupa from '../../assets/search.png';
+import lupaimg from '../../assets/lupa.png';
 import './header.css';
 import { ProductContext } from '../../context/ProductContext';
 import { Cart } from '../Cart/Cart';
@@ -34,10 +34,14 @@ function Header() {
 
     window.addEventListener('scroll', handleScroll);
 
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const [ lupa, setLupa ] = useState(false);
+  const toggleLupa = () => {setLupa(!lupa)}
 
   return (
 
@@ -48,17 +52,19 @@ function Header() {
         </div>
 
         <div className='logo'>
-          <Link to={`/`}><img src={logo} className='imagelogo'></img> </Link>
+          <Link to={`/`}><img src={logo} className='imagelogo'></img></Link>
         </div>
 
         <div className='container-right'>
+
+          <button className='botonlupa' onClick= { toggleLupa }>
+            <img src={lupaimg} className='lupa'></img>
+          </button>
           
           <form onSubmit={onSearchSubmit}>       
             <div className='searchbar'>
 
-              <img src={lupa} className='lupa'></img>
-              
-                <div className="search-bar">
+                <div className={ `search-bar ${lupa ? 'isActive' : ''}`}>
                   <input
                   type="search"
                   name='valueSearch'

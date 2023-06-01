@@ -5,8 +5,6 @@ import { useCart } from '../../hook/useCart';
 import { Link } from 'react-router-dom';
 
 
-
-
 export const Product = ({ product}) => {
   const { name, img, sizes, price } = product;
   const { addToCart} = useCart()
@@ -38,17 +36,16 @@ const {allProducts, filteredProducts} = useContext(ProductContext)
                 <Product
                   key={product.id}
                   product={product}
-
-            />
+                />
             ))}
             </>
           ) :(
             <>
             {allProducts.map((product) => (
-              <Product
-              key={product.id}
-              product={product}
-            />
+                <Product
+                  key={product.id}
+                  product={product}
+                />
             ))}
             </>
           )

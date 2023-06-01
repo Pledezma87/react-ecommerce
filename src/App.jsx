@@ -4,7 +4,6 @@ import ProductsDetails from'./pages/ProductsDetails';
 import HomePage from'./pages/HomePage';
 import React from 'react';
 import SearchPage from "./pages/SearchPage";
-// import React from 'react';
 
 
 function App() {
@@ -12,8 +11,6 @@ function App() {
   return (
     <Router>
       <div className="container">
-  
-        {/* <hr/> */}
 
         <Routes>
           <Route path="/"exact element={<HomePage />}/>

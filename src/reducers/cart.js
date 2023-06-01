@@ -10,13 +10,11 @@ export const CART_ACTION_TYPES = {
   CLEAR_CART: 'CLEAR_CART',
   DELETE_FROM_CART: 'DELETE_FROM_CART'
 }
-
 // update localStorage with state for cart
 export const updateLocalStorage = state => {
   window.localStorage.setItem('cart', JSON.stringify(state))
   console.log(state)
 }
-
 
 const UPDATE_STATE_BY_ACTION = {
   [CART_ACTION_TYPES.ADD_TO_CART]: (state, action) => {
@@ -24,23 +22,7 @@ const UPDATE_STATE_BY_ACTION = {
     const productInCartIndex = state.findIndex(item => item.id === id)
 
     if (productInCartIndex >= 0) {
-      // 👀 una forma sería usando structuredClone
-      // const newState = structuredClone(state)
-      // newState[productInCartIndex].quantity += 1
 
-      // 👶 usando el map
-      // const newState = state.map(item => {
-      //   if (item.id === id) {
-      //     return {
-      //       ...item,
-      //       quantity: item.quantity + 1
-      //     }
-      //   }
-
-      //   return item
-      // })
-
-      // ⚡ usando el spread operator y slice
       const newState = [
         ...state.slice(0, productInCartIndex),
         { ...state[productInCartIndex], quantity: state[productInCartIndex].quantity + 1 },
@@ -113,38 +95,3 @@ export const cartReducer = (state, action) => {
   console.log(updateState)
   return updateState ? updateState(state, action) : state
 }
-
-/* export const Cartnew = () => {
-  const [cart, setCart] = useState(cartInitialState);
-
-  useEffect(() => {
-    updateLocalStorage(cart);
-  }, [cart]);
-
-  const addToCart = (product) => {
-    setCart((prevCart) => {
-      return cartReducer(prevCart, {
-        type: CART_ACTION_TYPES.ADD_TO_CART,
-        payload: product
-      });
-    });
-  };
-
-  const removeFromCart = (product) => {
-    setCart((prevCart) => {
-      return cartReducer(prevCart, {
-        type: CART_ACTION_TYPES.REMOVE_FROM_CART,
-        payload: product
-      });
-    });
-  };
-
-  const clearCart = () => {
-    setCart((prevCart) => {
-      return cartReducer(prevCart, {
-        type: CART_ACTION_TYPES.CLEAR_CART
-      });
-    });
-  }
-}
- */

@@ -36,7 +36,8 @@
 }
 
 .lupa{
-    margin-right: 5px;
+    background-color: white;
+    margin: 0px;
 }
 
 .searchbar{
@@ -51,13 +52,16 @@
     padding: 10px;
 }
 
-
+.botonlupa{
+    border: none;
+    background-color: none;
+}
 
 @media (max-width: 850px){
 
-    .searchbar{
+    /* .searchbar{
     display: none;
-    }  
+    }   */
     
     .imagelogo{
         max-width: 50px;
@@ -71,8 +75,8 @@
     }
 
     .user{
-    margin: 0;
-    margin-top: 5px;
+        margin: 0;
+        margin-top: 5px;
     }
 
 }

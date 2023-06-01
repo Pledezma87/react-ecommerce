@@ -1,17 +1,8 @@
-import {React,useContext,useState,} from 'react';
-import Header from'../components/Header/Header';
-import Footer from'../components/Footer/Footer';
-import Cards from'../components/Cards/Cards';
-import Filter from'../components/Filter/Filter';
-import { ProductContext } from '../context/ProductContext';
+import {React, useState,} from 'react';
 import { AiOutlineLeft,AiOutlineRight } from 'react-icons/ai';
 
 
-function ProductsPage() {
-
-
-
-    const Carousel = () => {
+const Carousel = () => {
     const images = [
       "https://i.postimg.cc/SRmYwnHp/slider3.jpg",
       "https://i.postimg.cc/4x2vVQqH/slider2.png",
@@ -37,20 +28,4 @@ function ProductsPage() {
     );
   };
   
-
-  return ( 
-    <>
-
-      <Header />
-      <Carousel />
-      <Filter />
-      <Cards />
-      <Footer />
-  
-    </> 
-    );      
-};
-
-
-
-export default ProductsPage
+  export default Carousel;

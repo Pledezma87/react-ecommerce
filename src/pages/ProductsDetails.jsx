@@ -3,7 +3,6 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import { ProductContext } from '../context/ProductContext';
 import { useParams } from 'react-router-dom';
-import { Cart } from '../components/Cart/Cart';
 import { useCart } from "../hook/useCart"
 
 
@@ -29,7 +28,7 @@ const ProductsDetails = () => {
   return (
     <>
       <Header />
-      {/* <Cart /> */}
+    
       <div className="product-details">
         <div className='product-img'>
           <img src={productDetail.img} alt={productDetail.name} />
@@ -55,6 +54,7 @@ const ProductsDetails = () => {
           </div>
         </div>
       </div>
+      
       <Footer />
     </>
   );

@@ -3,10 +3,11 @@ import Header from'../components/Header/Header';
 import Footer from'../components/Footer/Footer';
 import Cards from'../components/Cards/Cards';
 import Filter from'../components/Filter/Filter';
-import slider from'../assets/slider.png';
 import { useLocation, Link} from 'react-router-dom';
 import { ProductContext } from '../context/ProductContext';
 import { useCart } from "../hook/useCart"
+import { Carousel } from 'bootstrap';
+
 
 const Product = ({ product}) => {
   console.log(product)
@@ -26,8 +27,6 @@ const Product = ({ product}) => {
   };
 
 
-  
-
 function SearchPage() {
 
     const {allProducts} = useContext(ProductContext)
@@ -42,9 +41,6 @@ function SearchPage() {
     <>
     
         <Header />
-        <div className='productsbanner'> 
-          <img src={slider} className='slider-img'/>
-        </div>
         <Filter />
         <div className="card-container"> 
           {filteredProducts.map((product) => (
