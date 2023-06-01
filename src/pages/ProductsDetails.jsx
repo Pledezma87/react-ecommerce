@@ -29,9 +29,11 @@ const ProductsDetails = () => {
   return (
     <>
       <Header />
-      <Cart />
+      {/* <Cart /> */}
       <div className="product-details">
-        <img src={productDetail.img} alt={productDetail.name} />
+        <div className='product-img'>
+          <img src={productDetail.img} alt={productDetail.name} />
+        </div>
         <div className="product-info">
           <h2>{productDetail.name}</h2>
           <div className="product-sizes">
@@ -49,7 +51,7 @@ const ProductsDetails = () => {
             </button>
           </div>
           <div className='descriptions'>
-          <h5>{productDetail.description}</h5>
+            <h5>{productDetail.description}</h5>
           </div>
         </div>
       </div>

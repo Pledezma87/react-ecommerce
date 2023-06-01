@@ -10,17 +10,17 @@ function HomePage() {
   return ( <>
         
         <Header />
-        <Cart />
+        {/* <Cart /> */}
 
         <div className='banner'>
             <div className='banerwomen'>
-            <img src={Women} className='banerwomen-img' alt="women"/><h2 className='titlewomen'>WOMEN</h2>
+              <img src={Women} className='banerwomen-img' alt="women"/><h2 className='titlewomen'>WOMEN</h2>
             </div>
             <div className='banermen'>
-            <Link to={`/men`}><img src={Men} className='banermen-img' alt="men"/><h2 className='titlemen'>MEN</h2></Link>
-           
+              <Link to={`/men`}><img src={Men} className='banermen-img' alt="men"/><h2 className='titlemen'>MEN</h2></Link>
             </div>
         </div>
+        
         <Footer />
 
           </> );      

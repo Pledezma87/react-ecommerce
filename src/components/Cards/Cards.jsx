@@ -36,19 +36,18 @@ const {allProducts, filteredProducts} = useContext(ProductContext)
             <>
             {filteredProducts.map((product) => (
                 <Product
-                 key={product.id}
+                  key={product.id}
                   product={product}
 
             />
             ))}
             </>
-           ) :(
+          ) :(
             <>
             {allProducts.map((product) => (
               <Product
               key={product.id}
               product={product}
-
             />
             ))}
             </>
@@ -56,7 +55,6 @@ const {allProducts, filteredProducts} = useContext(ProductContext)
         } 
       
     </div>
-   
     
   )
 };

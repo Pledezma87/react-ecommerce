@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    z-index: 5;
+    z-index: 2;
+    width: 100%;
 }
 
 .header-fixed {
@@ -11,7 +12,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    
 }
 
 .container-navbar{
@@ -53,7 +53,7 @@
 
 
 
-@media (max-width: 600px){
+@media (max-width: 850px){
 
     .searchbar{
     display: none;
@@ -66,8 +66,13 @@
     }
     
     .user img{
-        margin-right: 5px;
-       padding: 17px;
+        margin: 0;
+        padding: 0
+    }
+
+    .user{
+    margin: 0;
+    margin-top: 5px;
     }
 
 }

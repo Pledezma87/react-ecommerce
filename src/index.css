@@ -11,6 +11,7 @@
 
 .banner {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,18 +20,17 @@
   }
 
 .banerwomen {
-    width: 100vw; 
-    height: 100vh;
+    width: 50%; 
+    height: 100%;
     align-items: center;
     display: flex;
     position: relative;
 }
 
 .banermen {
-    width: 100vw; 
-    height: 100vh;
+    width: 50%; 
+    height: 100%;
     align-items: center;
-    display: flex;
     position: relative;
     object-fit: cover;
 }
@@ -43,8 +43,9 @@
 
 .banermen-img {
     object-fit:cover;
-    width: 50vw; 
-    height: 100vh;
+    width: 100%; 
+    height: 100%;
+    
 }
 
 .titlewomen {
@@ -63,7 +64,7 @@
     color: rgb(0, 0, 0);
     font-size: 2.5rem;
     font-weight: 500;
-    margin-left: 50%;
+    margin-left: 46%;
     top: 50%;
 }
 
@@ -74,50 +75,33 @@
 }
 
 
-/*MEDIA QUERY HOME*/ 
+/*MEDIA QUERY HOME banner mujer y hombre*/ 
 @media (max-width: 850px) {
+
     .banner {
+        display: flex;
         flex-direction: column; 
-        min-width: 50px; min-height: 50px;
         object-fit: cover;
     }
 
     .banerwomen {
-        width: 100%; height: 80%;
+        width: 100%; 
+        height: 100%;
         object-fit: cover;
     }
     
     .banermen {
-        width: 100%; height: 80%;
+        width: 100%; 
+        height: 100%;
         object-fit: cover;
-    }
-    .banermen-img{
-        width: 100vw;
-        object-fit: cover;
-    }
-}
-
-@media (max-width: 500px) {
-    .banermen-img{
-        height:50vh ;
     }
     
 }
+
 
 /*PRODUCTS*/
 
-.slider-img {
-    height: 100%;
-    width: 100%;   
-    
-    /* object-fit: cover, */
-}
 
-/* .productsbanner {
-    width: 100%;
-    height: 500px;
-    padding-bottom: 30px;
-} */
 
 
 /*MEDIA QUERY PRODUCTS*/ 
@@ -127,7 +111,6 @@
         padding-bottom: 10px;
         display: flex;
         width: 100%;
-       
         
     }
 
@@ -140,13 +123,11 @@
     align-items:flex-start;
     padding: 20px;
     text-align: justify;
-
   }
   
   .product-details img {
     width: 300px;
     margin-right: 60px;
-   
   }
   
   .product-info {
@@ -158,8 +139,6 @@
     width:   50vh;
     /* height:  50vh;  */
     margin-left: 60px;
-    
-    
   }
   
   .product-info h2 {
@@ -167,9 +146,7 @@
     margin-bottom: 50px;
     text-align: center;
     margin-top: 10px;
-    
   }
-  
   
   .product-sizes {
     margin-bottom: 40px;
@@ -188,9 +165,9 @@
     cursor: pointer;
     margin-bottom: 20px;
   }
+
   .product-sizes button:hover {
     background-color: #1976d2;
-    
   }
   
   .product-price {
@@ -204,8 +181,8 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-
   }
+
   .add-to-cart {
     font-size: 16px;
     background-color: #2196f3;
@@ -231,21 +208,22 @@
     justify-content: center;
     align-items: center;
     margin-top: 60px;
-    
   }
+
   /* carousel */
   .carousel{
     width: 100%;
     position: relative;
     display: flex;
-    height: 500px;
-
+    height: 590px;
+    margin-bottom: 25px;
 }
 
 .imagenes{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: relative;
-    
 }
 
 .botonizq{
@@ -260,7 +238,6 @@
     background-color: #e4e1e1b4;
     left: 2.5%;
     cursor: pointer;
-
 }
 
 .botondrch{
@@ -275,5 +252,70 @@
     left: 95%;
     bottom: 50%;
     cursor: pointer;
-   
+}
+
+@media (max-width: 850px){
+
+  /* detalles de produc.en mediaquery */
+  .product-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-img{
+    display: flex;
+    align-self: center;
+  }
+
+  .product-details img{
+    margin: 0;
+  }
+
+  .product-info{
+    margin: 0;
+  }
+
+  .product-info h2{
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .product-sizes{
+    margin-bottom: 0;
+  }
+
+  .product-price{
+    margin: 0;
+  }
+
+  .botonañadir{
+    margin-top: 15px;
+  }
+
+  .descriptions{
+    margin-top: 15px;
+  }
+
+
+  /* Carousel en mediaquery */
+  .carousel{
+    height: 200px;
+    width: 100%;
+  }
+
+  .botondrch{
+    position: absolute;
+    border: none; 
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: #e4e1e1b4;
+    left: 90%;
+    bottom: 50%;
+    cursor: pointer;
+}
 }

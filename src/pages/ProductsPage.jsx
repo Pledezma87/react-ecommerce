@@ -45,8 +45,8 @@ function ProductsPage() {
     <>
 
       <Header />
+      {/* <Cart /> */}
       <Carousel />
-      <Cart />
       <Filter />
       <Cards />
       <Footer />
