@@ -1,4 +1,4 @@
-.card-container {
+/* .card-container {
     margin: 65px;
     display: grid;
     grid-template-columns: repeat(
@@ -8,8 +8,16 @@
             3fr
         )
     );
-    gap: 1rem;
+    gap: 2rem;
     width: 100%;
+  } */
+
+  .card-container {
+    margin: 65px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    width: 95%;
   }
   
   .cards {

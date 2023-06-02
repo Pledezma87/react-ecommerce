@@ -5,7 +5,7 @@ import { React, useId, useEffect, useState, useContext} from 'react'
 import { useCart } from '../../hook/useCart'
 import cartIcon from '../../assets/image 5.png';
 
-
+/*funcion precio total por articulo*/
 function calculateItemTotalPrice(price, quantity) {
   return price * quantity;
 }
@@ -51,7 +51,18 @@ function CartItem ({ img, price, name, quantity, addToCart, deleteFromCart, remo
   )
 }
 
+/* Total cantidad de articulos */
+function calculateTotalQuantity(cart) {
+  let totalQuantity = 0;
 
+  cart.forEach(product => {
+    totalQuantity += product.quantity;
+  });
+
+  return totalQuantity;
+}
+
+/* precio total del carrito*/
 function calculateTotalPrice(cart) {
   let totalPrice = 0;
 
@@ -63,11 +74,12 @@ function calculateTotalPrice(cart) {
   return  totalPrice 
 }
 
+/*funcion del carrito */
 export function Cart () {
   const [isCartOpen, setCartOpen] = useState(false)
   const cartCheckboxId = useId()
   const { cart, clearCart, addToCart, removeFromCart, deleteFromCart } = useCart()
-
+  const totalQuantity = calculateTotalQuantity(cart);
 
   useEffect(() => {
     if (isCartOpen) {
@@ -83,11 +95,11 @@ export function Cart () {
   };
 
 
-
   return (
     <>
       <label className='cart-button' htmlFor={cartCheckboxId}  onClick={toggleCart}>
         <img className='cart-img' src={cartIcon} alt="" />
+        <span className='count-art'>{totalQuantity}</span>
       </label>
       <input id={cartCheckboxId} type='checkbox' hidden />
 
@@ -95,7 +107,8 @@ export function Cart () {
         <aside className='cart'>
             
         <header className='artics'>
-          Artículos
+          Artículos --
+          <span> - {totalQuantity}</span>
         </header>
 
         <hr />

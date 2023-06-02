@@ -172,6 +172,17 @@
     display: block;
   }  
 
+  .count-art{
+    background-color: rgba(29, 96, 162, 0.535);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    top: 95px;
+    border-radius: 50px;
+    right: 40px;
+  }
+
   .total{
     height: 50px;
     display: flex;
@@ -199,13 +210,16 @@
   }
 
 
-  
 /*MEDIA QUERY PRODUCTS*/ 
 @media (max-width: 850px) {
 
   .cart{
     width: 100%;
     top:130px
+  }
+
+  .count-art{
+    top: 45px;
   }
 
 }

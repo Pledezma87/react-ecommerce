@@ -62,9 +62,9 @@ function Header() {
           </button>
           
           <form onSubmit={onSearchSubmit}>       
-            <div className='searchbar'>
+            <div className={ `searchbar ${lupa ? 'isActive' : ''}`}>
 
-                <div className={ `search-bar ${lupa ? 'isActive' : ''}`}>
+                <div className='search-bar'>
                   <input
                   type="search"
                   name='valueSearch'
