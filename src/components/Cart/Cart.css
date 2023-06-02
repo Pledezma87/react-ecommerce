@@ -173,14 +173,16 @@
   }  
 
   .count-art{
-    background-color: rgba(29, 96, 162, 0.535);
+    background-color: rgba(29, 95, 162, 0.445);
     position: absolute;
-    width: 20px;
-    height: 20px;
-    text-align: center;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     top: 95px;
     border-radius: 50px;
-    right: 40px;
+    right: 37px;
   }
 
   .total{
