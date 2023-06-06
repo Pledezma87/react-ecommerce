@@ -68,10 +68,11 @@ Or
 
 -  npx json-server -p 3000 -w db.json
 
+#### Open the project:
 
-3.  In the project directory, you can run:
+ In the project directory, you can run:
 
-#### `npm start`
+**`npm start`**
 
 Runs the app in the development mode.\
 Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
