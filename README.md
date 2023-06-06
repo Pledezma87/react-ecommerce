@@ -1,12 +1,57 @@
-# Getting Started with Create React App
+# Take a look at our Pull&Push Ecommerce👕🩳🕶️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Our project is based on the creation of an ecommerce for the sale of men's clothing. It has different functionalities that facilitate the shopping experience and provide an intuitive interaction for users. In addition, the website is responsive so it adapts to different mobile devices
 
-## Available Scripts
+### Project requirements
+
+🛒Shopping Cart: Users can select the items they want to buy by clicking the "add to cart" button and adding them. They can review the items in the cart at any time, modify quantities and remove products based on customer needs.
+
+💡Filter by Category: Users can filter clothing by category, allowing them to quickly browse and find the products that fit their needs and preferences.
+
+🔍Search Bar: The website has a search engine that allows users to search for specific products.
+
+🔑 Product Detail Page: In which detailed information, technical characteristics, images and prices are provided so that users can see all the information of an item before buying it.
+
+🖱️JSON API: A JSON API is used to store and manage the data of all the items available in the store. This ensures that product information is kept up to date and can be accessed efficiently.
+
+### Technologies:
+
+React
+HTML5
+CSS
+JavaScript
+JSON API: to store and manage item data (clothing)
+
+### Agile
+
+Trello
+Figma
+GitHub
+Deploy
+
+
+### Dependencies:
+
+@fortawesome/fontawesome-svg-core
+@fortawesome/free-regular-svg-icons
+@fortawesome/free-solid-svg-icons
+@fortawesome/react-fontawesome
+@testing-library/jest-dom
+@testing-library/react
+@testing-library/user-event
+@uiball/loaders
+bootstrap
+react
+react-dom
+react-icons
+react-router-dom
+react-scripts
+
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,57 +59,21 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+#### To initialize the project:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install J son server
 
-### `npm run build`
+1.  npm install -g json-server
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Open the j son in the localhost
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2.  json-server --watch db.json 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3.  npx json-server -p 3000 -w db.json
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
