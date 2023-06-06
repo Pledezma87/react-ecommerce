@@ -23,14 +23,14 @@ Our project is based on the creation of an ecommerce for the sale of men's cloth
 - **VSCode**: Code editor used to write and edit the project's source code.
 - **Figma**: Design tool used to create the website's mockups and designs.
 - **Trello**: Tool used to organize and manage the project's tasks.
-- **React**: Open-source JavaScript framework and library .
-- **JSON API**: to store and manage item data (clothing)
+- **React**: Open-source JavaScript framework and library.
+- **JSON API**: to store and manage item data (clothing).
 
 ### Agile
 
-* **[Trello]** https://trello.com/b/rSLb4qZT/app-ecommerce-react
-* **[Figma]** https://www.figma.com/file/H7N9uQPJvI9sqpo2eOOsP2/Pull%26Bear-(React)?type=design&node-id=20-5&t=LjeKnrrSgYtg4EPR-0
-* **[Github]** https://github.com/Pledezma87/react-ecommerce
+* **[Trello]** (https://trello.com/b/rSLb4qZT/app-ecommerce-react)
+* **[Figma]** (https://www.figma.com/file/H7N9uQPJvI9sqpo2eOOsP2/Pull%26Bear-(React)?type=design&node-id=20-5&t=LjeKnrrSgYtg4EPR-0)
+* **[Github]** (https://github.com/Pledezma87/react-ecommerce)
 * **[Deploy]** 
 
 
@@ -53,38 +53,40 @@ Our project is based on the creation of an ecommerce for the sale of men's cloth
 
 ### Available Scripts
 
-In the project directory, you can run:
+#### To initialize the project:
+
+1.  Install J son server
+
+- npm install -g json-server
+
+
+2.  Open the j son in the localhost (you have two options):
+
+-  json-server --watch db.json 
+
+Or
+
+-  npx json-server -p 3000 -w db.json
+
+
+3.  In the project directory, you can run:
 
 #### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-#### To initialize the project:
-
-Install J son server
-
-1.  npm install -g json-server
-
-
-Open the j son in the localhost
-
-2.  json-server --watch db.json 
-
-
-3.  npx json-server -p 3000 -w db.json
-
 
 ### Authors:
 
-* [Ana López] https://github.com/Alh-19
-* [Pablo Ledezma] https://github.com/Pledezma87
-* [Gabriela Guzmán] https://github.com/Gabsgt99
-* [Nuria Pérez] https://github.com/NuriaPerezBravo
-* [Rocío Gamboy] https://github.com/Rous2106
+* [Ana López] (https://github.com/Alh-19)
+* [Pablo Ledezma] (https://github.com/Pledezma87)
+* [Gabriela Guzmán] (https://github.com/Gabsgt99)
+* [Nuria Pérez] (https://github.com/NuriaPerezBravo)
+* [Rocío Gamboy] (https://github.com/Rous2106)
 
 
 
