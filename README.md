@@ -28,9 +28,9 @@ Our project is based on the creation of an ecommerce for the sale of men's cloth
 
 ### Agile
 
-* **[Trello]** (https://trello.com/b/rSLb4qZT/app-ecommerce-react)
-* **[Figma]** (https://www.figma.com/file/H7N9uQPJvI9sqpo2eOOsP2/Pull%26Bear-(React)?type=design&node-id=20-5&t=LjeKnrrSgYtg4EPR-0)
-* **[Github]** (https://github.com/Pledezma87/react-ecommerce)
+* **[Trello]**(https://trello.com/b/rSLb4qZT/app-ecommerce-react)
+* **[Figma]**(https://www.figma.com/file/H7N9uQPJvI9sqpo2eOOsP2/Pull%26Bear-(React)?type=design&node-id=20-5&t=LjeKnrrSgYtg4EPR-0)
+* **[Github]**(https://github.com/Pledezma87/react-ecommerce)
 * **[Deploy]** 
 
 
@@ -82,11 +82,11 @@ You may also see any lint errors in the console.
 
 ### Authors:
 
-* [Ana López] (https://github.com/Alh-19)
-* [Pablo Ledezma] (https://github.com/Pledezma87)
-* [Gabriela Guzmán] (https://github.com/Gabsgt99)
-* [Nuria Pérez] (https://github.com/NuriaPerezBravo)
-* [Rocío Gamboy] (https://github.com/Rous2106)
+* [Ana López](https://github.com/Alh-19)
+* [Pablo Ledezma](https://github.com/Pledezma87)
+* [Gabriela Guzmán](https://github.com/Gabsgt99)
+* [Nuria Pérez](https://github.com/NuriaPerezBravo)
+* [Rocío Gamboy](https://github.com/Rous2106)
 
 
 
