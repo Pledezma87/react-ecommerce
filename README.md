@@ -31,7 +31,7 @@ Our project is based on the creation of an ecommerce for the sale of men's cloth
 * **[Trello](https://trello.com/b/rSLb4qZT/app-ecommerce-react)**
 * **[Figma](https://www.figma.com/file/H7N9uQPJvI9sqpo2eOOsP2/Pull%26Bear-(React)?type=design&node-id=20-5&t=LjeKnrrSgYtg4EPR-0)**
 * **[Github](https://github.com/Pledezma87/react-ecommerce)**
-* **[Deploy]** 
+* **[Deploy](https://react-ecommerce-fawn.vercel.app/)** 
 
 
 ### Dependencies:
