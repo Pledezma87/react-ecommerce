@@ -1,0 +1,85 @@
+{
+  "stock": [
+    {
+      "id": 1,
+      "name": "Pantalón jogger lino rústico",
+      "price": 25.99,
+      "img": "https://i.postimg.cc/QCh8RFZx/pantalon1.png",
+      "quantity": 1,
+      "category": "jogger",
+      "description":"Pantalón jogger estilo rústico en tejido de lino con cintura elástica con cordón y goma en los bajos"
+    },
+    {
+      "id": 2,
+      "name": "Pantalón cargo caqui cremalleras",
+      "price": 39.99,
+      "img": "https://i.postimg.cc/pr1HXcWs/pantalon2.png",
+      "quantity": 1,
+      "category": "cargo",
+      "description":"Pantalón cargo estilo rústico en tejido de lino con cintura elástica con cordón y goma en los bajos"
+    },
+    {
+      "id": 3,
+      "name": "Pantalón cargo básico",
+      "price": 25.99,
+      "img": "https://i.postimg.cc/BZ27SV6b/pantalon3.png",
+      "quantity": 1,
+      "category": "cargo",
+      "description":"Pantalón cargo estilo rústico en tejido de lino con cintura elástica con cordón y goma en los bajos"
+    },
+    {
+      "id": 4,
+      "name": "Pantalón cargo",
+      "price": 29.99,
+      "img": "https://i.postimg.cc/0jZp6mFW/pantalon4.png",
+      "quantity": 1,
+      "category": "cargo",
+      "description":"Pantalón cargo estilo rústico en tejido de lino con cintura elástica con cordón y goma en los bajos"
+    },
+    {
+      "id": 5,
+      "name": "Pantalón jogger básico",
+      "price": 25.99,
+      "img": "https://i.postimg.cc/PJNq4wNF/pantalon5.png",
+      "quantity": 1,
+      "category": "jogger",
+      "description":"Pantalón jogger estilo rústico en tejido de lino con cintura elástica con cordón y goma en los bajos"
+    },
+    {
+      "id": 6,
+      "name": "Pantalón jogger lino",
+      "price": 29.99,
+      "img": "https://i.postimg.cc/4yrXQ2Dm/pantalon6.png",
+      "quantity": 1,
+      "category": "jogger",
+      "description":"Pantalón jogger estilo rústico en tejido de lino con cintura elástica con cordón y goma en los bajos"
+    },
+    {
+      "id": 7,
+      "name": "Pantalón chandal",
+      "price": 29.99,
+      "img": "https://i.postimg.cc/HktVTdGz/pantalon7.png",
+      "quantity": 1,
+      "category": "chandal",
+      "description":"Pantalón chandal estilo rústico en tejido de lino con cintura elástica con cordón y goma en los bajos"
+    },
+    {
+      "id": 8,
+      "name": "Pantalón chandal cargo básico",
+      "price": 25.99,
+      "img": "https://i.postimg.cc/dt209w0F/pantalon8.png",
+      "quantity": 1,
+      "category": "chandal",
+      "description":"Pantalón chandal estilo rústico en tejido de lino con cintura elástica con cordón y goma en los bajos"
+    },
+    {
+      "id": 9,
+      "name": "Pantalón chandal lino",
+      "price": 25.99,
+      "img": "https://i.postimg.cc/NfcsFSkz/pantalon9.png",
+      "quantity": 1,
+      "category": "chandal",
+      "description":"Pantalón chandal estilo rústico en tejido de lino con cintura elástica con cordón y goma en los bajos"
+    }
+  ]
+}
